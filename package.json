@@ -8,11 +8,13 @@
     "test": "tests"
   },
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "test": "jest"
-  },
+  "dev": "tsx watch src/server.ts",
+  "build": "tsc",
+  "start": "node dist/server.js",
+  "test": "jest",
+  "migrate": "tsx src/database/migrate.ts",
+  "seed": "tsx src/database/seed.ts"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mharmar/unisphere-ojtflow-backend.git"
@@ -26,14 +28,17 @@
   },
   "homepage": "https://github.com/Mharmar/unisphere-ojtflow-backend#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^18.0.10",
     "express": "^4.22.3",
     "helmet": "^8.3.0",
+    "mysql2": "^3.24.6",
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/cookie-parser": "^1.4.10",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
