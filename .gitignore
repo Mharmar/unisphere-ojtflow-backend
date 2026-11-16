@@ -1,0 +1,7 @@
+﻿node_modules
+dist
+.env
+.env.test
+storage/uploads/company-logos/*
+!storage/uploads/company-logos/.gitkeep
+provision-output.json
